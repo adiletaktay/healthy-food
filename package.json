@@ -1,17 +1,16 @@
 {
-  "name": "food",
+  "name": "healthy-food",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --host 0.0.0.0 --port 80",
-    "build": "webpack"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "browsersList": [
-    "> 1%"
+  "browserslist": [
+    "> 1%",
+    "not dead"
   ],
   "devDependencies": {
     "@babel/cli": "^7.21.0",

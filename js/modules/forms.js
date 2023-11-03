@@ -1,9 +1,7 @@
-import {closeModal, openModal} from "./modal";
-import {postData} from "../services/services";
-
-function forms(formSelector, modalTimerId) {
-
-    const forms = document.querySelectorAll(formSelector);
+import {closeModal, openModal} from './modal';
+import {postData} from '../services/services';
+function forms(formsSelector, modalTimerId) {
+    const forms = document.querySelectorAll(formsSelector);
     const message = {
         loading: 'img/form/spinner.svg',
         success: 'Спасибо! Скоро мы с вами свяжемся',
@@ -30,7 +28,7 @@ function forms(formSelector, modalTimerId) {
 
             const json = JSON.stringify(Object.fromEntries(formData.entries()));
 
-            postData('http://localhost/requests', json)
+            postData('http://localhost:3000/requests', json)
             .then(data => {
                 console.log(data);
                 showThanksModal(message.success);
